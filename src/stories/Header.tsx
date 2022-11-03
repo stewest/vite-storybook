@@ -1,8 +1,3 @@
-import React from 'react';
-
-import { Button } from './Button';
-import './header.css';
-
 type User = {
   name: string;
 };
@@ -14,15 +9,13 @@ interface HeaderProps {
 export const Header = ({ user }: HeaderProps) => (
   <header>
     <div className="text-xl text-blue-600">
-      <div>
-        {user ? (
-          <>
-            Welcome, <b>{user.name}</b>!
-          </>
-        ) : (
-          <>Welcome</>
-        )}
-      </div>
+      {user ? (
+        <>
+          Welcome, <b>{user.name}</b>!
+        </>
+      ) : (
+        <>Welcome</>
+      )}
     </div>
   </header>
 );
